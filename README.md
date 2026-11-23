@@ -92,6 +92,7 @@ project-name/
 Details for building the source code are in each project's README.
 
 ## Contact
+**Abolfazl Jalil S.**
+ 
+[Email](mailto:abolfazljalil6@gmail.com)
 
-**Abolfazl jalil.s**
-[Email](mailto:abolfazljalil6@gmail.com.com)
