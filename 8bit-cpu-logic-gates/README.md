@@ -1,12 +1,9 @@
-[← Back to all projects](../README.md)
-
 # 8-Bit CPU Building Blocks from Logic Gates
 
 The core building blocks of an 8-bit CPU — an **ALU**, **registers** and **memory cells** — designed from basic logic gates (AND, OR, NOT, NAND, XOR) and simulated in **Proteus**.
 
 No microcontroller and no ready-made arithmetic ICs: every adder, shifter, decoder and memory bit is built gate by gate and organized as a hierarchy of reusable sub-circuits.
 
-![Demo](docs/demo.gif)
 
 ## Features
 
@@ -78,14 +75,6 @@ CPU_REG                     8-bit register (I0–I7, set, enable)
 
 **Zero flag:** all 8 result bits go into an 8-input NOR gate, which outputs 1 only when every bit is 0.
 
-## Folder structure
-
-```
-8bit-cpu-logic-gates/
-├── simulation/   Proteus project (CPU.pdsprj)
-├── docs/         Schematic images and demo GIF
-└── README.md
-```
 
 ## How to run
 
@@ -94,10 +83,6 @@ CPU_REG                     8-bit register (I0–I7, set, enable)
 3. Set operands A and B and the operation code with the logic-state switches.
 4. Read the result and flags on the logic probes. Double-click a sub-circuit to go inside it and see its gates.
 
-## Schematics
-
-![ALU](docs/alu.png)
-![Register](docs/register.png)
 
 ## Tools
 
