@@ -1,0 +1,107 @@
+DATA SEGMENT
+    PORTA    EQU 00H     
+    PORTB    EQU 02H    
+    PORTC    EQU 04H    
+    PORT_CON EQU 06H     
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME CS:CODE, DS:DATA
+    
+    MOV AX, DATA
+    MOV DS, AX
+    
+    ORG 0000H
+START:
+    
+    MOV DX, PORT_CON
+    MOV AL, 10010000B      
+    OUT DX, AL
+
+MAIN_LOOP:
+   
+    MOV DX, PORTB
+    MOV AL, 00000000B     
+    OUT DX, AL
+    
+    CALL DELAY_3SEC
+    
+   
+    CALL READ_AND_PROCESS
+    
+   
+    MOV DX, PORTB
+    MOV AL, 00000001B      
+    OUT DX, AL
+    
+    CALL DELAY_3SEC
+    
+   
+    CALL READ_AND_PROCESS
+    
+    JMP MAIN_LOOP
+
+READ_AND_PROCESS PROC
+    
+    MOV DX, PORTA
+    IN AL, DX              
+    PUSH AX                
+    
+  
+    MOV DX, PORTB
+    IN AL, DX             
+    TEST AL, 00000010B   
+    POP AX               
+    JZ THRESHOLD_40      
+    JMP THRESHOLD_20     
+
+THRESHOLD_40:
+    CMP AL, 66H          
+    JB SET_LOW_HUMIDITY_40 
+    JMP SET_HIGH_HUMIDITY  
+
+THRESHOLD_20:
+    CMP AL, 33H          
+    JB SET_LOW_HUMIDITY_20
+    JMP SET_HIGH_HUMIDITY 
+
+SET_HIGH_HUMIDITY:
+    MOV DX, PORTC
+    MOV AL, 00000010B    
+    OUT DX, AL
+    RET
+
+SET_LOW_HUMIDITY_40:
+    MOV DX, PORTC
+    MOV AL, 00000101B    
+    OUT DX, AL
+    RET
+
+SET_LOW_HUMIDITY_20:
+    MOV DX, PORTC
+    MOV AL, 00001001B    
+    OUT DX, AL
+    RET
+
+READ_AND_PROCESS ENDP
+
+DELAY_3SEC PROC
+    PUSH CX
+    PUSH BX
+    
+    MOV BX, 3             
+OUTER_LOOP:
+    MOV CX, 0FFFFH        
+INNER_LOOP:
+    NOP                   
+    LOOP INNER_LOOP
+    DEC BX
+    JNZ OUTER_LOOP
+    
+    POP BX
+    POP CX
+    RET
+DELAY_3SEC ENDP
+
+CODE ENDS
+END START
