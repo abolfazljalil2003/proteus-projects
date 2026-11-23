@@ -94,4 +94,4 @@ Details for building the source code are in each project's README.
 ## Contact
 
 **Abolfazl jalil.s**
-[Email](abolfazljalil6@gmail.com.com)
+[Email](mailto:abolfazljalil6@gmail.com.com)
