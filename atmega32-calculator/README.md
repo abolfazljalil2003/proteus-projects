@@ -1,5 +1,3 @@
-[← Back to all projects](../README.md)
-
 # ATmega32 Scientific Calculator
 
 A keypad calculator built with an **ATmega32** microcontroller, a **4×6 calculator keypad** and a **16×2 character LCD**, written in **C (CodeVisionAVR)** and simulated in **Proteus**.
@@ -61,15 +59,6 @@ The `+` key is a double-height key covering rows C and D.
 
 **Delay:** Timer0 runs with a prescaler of 64 and is preloaded with 240, so each overflow takes 16 × 64 = 1024 cycles, about 1 ms at 1 MHz.
 
-## Folder structure
-
-```
-atmega32-calculator/
-├── simulation/   Proteus project (.pdsprj)
-├── firmware/     C source (main.c) and compiled .hex
-├── docs/         Schematic and demo GIF
-└── README.md
-```
 
 ## How to run
 
@@ -85,9 +74,6 @@ To rebuild the firmware, open `firmware/main.c` in **CodeVisionAVR** with the AT
 - Holding a key down repeats it, because the scan routine doesn't wait for the key to be released.
 - The delete-last-digit function exists in the code but isn't mapped to a key yet.
 
-## Schematic
-
-![Schematic](docs/schematic.png)
 
 ## Tools
 
