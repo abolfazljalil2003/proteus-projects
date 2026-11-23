@@ -1,4 +1,4 @@
-[← Back to all projects](../README.md)
+[← Back to all projects](https://github.com/abolfazljalil2003/proteus-projects)
 
 # 8086 Smart Irrigation Controller
 
