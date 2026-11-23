@@ -87,3 +87,5 @@ CPU_REG                     8-bit register (I0–I7, set, enable)
 ## Tools
 
 Proteus 8 · Digital logic design
+
+**Team project with** — [GitHub](https://github.com/hoseda)
