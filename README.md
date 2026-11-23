@@ -12,7 +12,7 @@ Each project has its own folder with the simulation file, source code, schematic
 
 ## Projects
 
-### 🔲 [8-Bit CPU Building Blocks](8bit-cpu-logic-gates/)
+### [8-Bit CPU Building Blocks](8bit-cpu-logic-gates/)
 
 ![ALU schematic](8bit-cpu-logic-gates/docs/alu.png)
 
@@ -26,7 +26,7 @@ An 8-bit ALU, registers and memory cells built entirely from basic logic gates, 
 
 ---
 
-### 🌱 [8086 Smart Irrigation Controller](8086-smart-irrigation/)
+### [8086 Smart Irrigation Controller](8086-smart-irrigation/)
 
 ![Irrigation schematic](8086-smart-irrigation/docs/schematic.png)
 
@@ -40,7 +40,7 @@ An automatic irrigation system that reads soil moisture and turns on a water pum
 
 ---
 
-### 🧮 [ATmega32 Scientific Calculator](atmega32-calculator/)
+### [ATmega32 Scientific Calculator](atmega32-calculator/)
 
 ![Calculator schematic](atmega32-calculator/docs/schematic.png)
 
@@ -76,8 +76,8 @@ Each project folder follows the same layout:
 
 ```
 project-name/
-├── simulation/   Proteus project (.pdsprj)
-├── src/ or firmware/   Source code (and compiled binary)
+├── Proteus project (.pdsprj)
+├── Source code (and compiled binary)
 ├── docs/         Schematics and demo GIF
 └── README.md
 ```
@@ -94,4 +94,4 @@ Details for building the source code are in each project's README.
 ## Contact
 
 **Your Name**
-[LinkedIn](https://www.linkedin.com/in/your-profile) · [Email](mailto:your.email@example.com)
+[Email](abolfazljalil6@gmail.com.com)
