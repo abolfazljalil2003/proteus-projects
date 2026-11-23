@@ -78,3 +78,5 @@ To rebuild the firmware, open `firmware/main.c` in **CodeVisionAVR** with the AT
 ## Tools
 
 Proteus 8 · CodeVisionAVR · C
+
+**Team project with** — [GitHub](https://github.com/hoseda)
